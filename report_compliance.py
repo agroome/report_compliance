@@ -185,7 +185,7 @@ def main():
     records_iterator = (
         inject_fields(
             process_records(
-                tio.exports.compliance(first_seen=first_seen, last_seen=last_seen, timeout=timeout), status=('PASSED', 'ERROR', 'WARNING', 'FAILED')), asset_dictionary, on_index='asset_uuid'
+                tio.exports.compliance(first_seen=first_seen, last_seen=last_seen, timeout=timeout), status=('ERROR', 'WARNING', 'FAILED')), asset_dictionary, on_index='asset_uuid'
         )
     )
 
